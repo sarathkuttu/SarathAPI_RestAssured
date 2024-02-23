@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="APIAutomationRestAssured"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="3.180">
+    <properties></properties>
+
+
+
+            <testcase
+                name="PATCHBooking_PT1"
+                time="3.180"
+                classname="com.APITesting.Tests.CRUD.Delete.DELETEBookerAutomationTC">
+            </testcase>
+</testsuite>

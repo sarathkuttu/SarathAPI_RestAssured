@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="APIAutomationRestAssured"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="4.061">
+    <properties></properties>
+
+
+
+            <testcase
+                name="PUTBooking_PT1"
+                time="4.061"
+                classname="com.APITesting.Tests.CRUD.PUT.PUTBookerAutomationTC">
+            </testcase>
+</testsuite>
