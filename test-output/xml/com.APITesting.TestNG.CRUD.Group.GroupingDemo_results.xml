@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="C:/Users/Sarath/IdeaProjects/APIAutomationRestAssured"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.011">
+    <properties></properties>
+
+
+
+            <testcase
+                name="Sanity"
+                time="0.003"
+                classname="com.APITesting.TestNG.CRUD.Group.GroupingDemo">
+            </testcase>
+            <testcase
+                name="Regression"
+                time="0.008"
+                classname="com.APITesting.TestNG.CRUD.Group.GroupingDemo">
+            </testcase>
+</testsuite>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="APIAutomationRestAssured"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.012">
+    <properties></properties>
+
+
+
+            <testcase
+                name="Token"
+                time="0.003"
+                classname="com.APITesting.TestNG.CRUD.Group.Priority_Group">
+            </testcase>
+            <testcase
+                name="REQUEST"
+                time="0.001"
+                classname="com.APITesting.TestNG.CRUD.Group.Priority_Group">
+            </testcase>
+            <testcase
+                name="BookingID"
+                time="0.008"
+                classname="com.APITesting.TestNG.CRUD.Group.Priority_Group">
+            </testcase>
+</testsuite>

@@ -110,7 +110,6 @@ public class TC001CreateToken {
         //Matchers RestAssured(Hamcrest)
 
 
-
         //TESTNG ASSERTION
 
         bookingid = response.then().log().all().extract().path("bookingid");
@@ -119,7 +118,7 @@ public class TC001CreateToken {
 
         //ASSERJ
 
-//assertThat(token).isNotNull().isNotBlank().isNotEmpty();
+        //assertThat(bookingid).isNotNull();
 
 
     }

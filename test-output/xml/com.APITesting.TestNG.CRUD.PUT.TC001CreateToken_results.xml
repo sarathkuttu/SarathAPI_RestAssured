@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.224">
+           time="1.385">
     <properties></properties>
 
 
 
             <testcase
                 name="PUTBooking_PT1"
-                time="1.224"
+                time="1.385"
                 classname="com.APITesting.TestNG.CRUD.PUT.TC001CreateToken">
             </testcase>
 </testsuite>
