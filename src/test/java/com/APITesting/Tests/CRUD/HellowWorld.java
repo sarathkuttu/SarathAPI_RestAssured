@@ -1,4 +1,4 @@
-package com.APITesting;
+package com.APITesting.Tests.CRUD;
 
 public class HellowWorld {
 
