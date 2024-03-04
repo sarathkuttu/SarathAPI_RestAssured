@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.759">
+           time="3.780">
     <properties></properties>
 
 
 
             <testcase
                 name="CreateBookingTC1"
-                time="3.759"
+                time="3.780"
                 classname="com.APITesting.gson.Easy.CreateBookingProperTC">
             </testcase>
 </testsuite>

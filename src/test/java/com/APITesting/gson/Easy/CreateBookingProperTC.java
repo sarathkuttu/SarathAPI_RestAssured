@@ -8,6 +8,7 @@ import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import static org.assertj.core.api.Assertions.*;
 
 public class CreateBookingProperTC {
@@ -75,15 +76,9 @@ public class CreateBookingProperTC {
         Assert.assertEquals(expectedLastName, bookingresponseObject.getBooking().getLastname());
 
 
-
-//       Assert.assertEquals(bookingresponseObject.getBookingid();
-//
-//        Assert.assertEquals(bookingresponseObject.getBooking().getFirstname();
-//        Assert.assertEquals(bookingresponseObject.getBooking().getLastname();
-
-//        assertThat(bookingresponseObject.getBookingid()).isNotNull();
-//        assertThat(bookingresponseObject.getBooking().getFirstname()).isNotNull();
-//        assertThat(bookingresponseObject.getBooking().getFirstname()).isEqualTo("Keerthana");
+        assertThat(bookingresponseObject.getBookingid()).isNotNull();
+        assertThat(bookingresponseObject.getBooking().getFirstname()).isNotNull();
+        assertThat(bookingresponseObject.getBooking().getFirstname()).isEqualTo("Keerthana");
 
     }
 
