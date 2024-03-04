@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="APIAutomationRestAssured"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="3.759">
+    <properties></properties>
+
+
+
+            <testcase
+                name="CreateBookingTC1"
+                time="3.759"
+                classname="com.APITesting.gson.Easy.CreateBookingProperTC">
+            </testcase>
+</testsuite>

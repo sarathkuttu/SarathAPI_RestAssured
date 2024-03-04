@@ -33,7 +33,7 @@ public class CreateBookingProperTC {
 
         Bookingdates bookingdate = new Bookingdates();
         bookingdate.setCheckin("2024-03-19");
-        bookingdate.setCheckin("2024-03-27");
+        bookingdate.setCheckout("2024-03-27");
 
         Booking.setBookingdates(bookingdate);
 
@@ -67,13 +67,23 @@ public class CreateBookingProperTC {
 
         BookingResponse bookingresponseObject = gson.fromJson(jsonResponseString, BookingResponse.class);
 
-//        Assert.assertEquals(bookingresponseObject.getFirstname(),"Keerthana");
-//
-//        Assert.assertEquals(bookingresponseObject.getLastname(),"Aravind");
+        String expectedFirstName = "Keerthana"; // Replace with the expected first name
+        String expectedLastName = "Aravind"; // Replace with the expected last name
 
-        assertThat(bookingresponseObject.getBookingid()).isNotNull();
-        assertThat(bookingresponseObject.getBooking().getFirstname()).isNotNull();
-        assertThat(bookingresponseObject.getBooking().getFirstname()).isEqualTo("Keerthana");
+
+        Assert.assertEquals(expectedFirstName, bookingresponseObject.getBooking().getFirstname());
+        Assert.assertEquals(expectedLastName, bookingresponseObject.getBooking().getLastname());
+
+
+
+//       Assert.assertEquals(bookingresponseObject.getBookingid();
+//
+//        Assert.assertEquals(bookingresponseObject.getBooking().getFirstname();
+//        Assert.assertEquals(bookingresponseObject.getBooking().getLastname();
+
+//        assertThat(bookingresponseObject.getBookingid()).isNotNull();
+//        assertThat(bookingresponseObject.getBooking().getFirstname()).isNotNull();
+//        assertThat(bookingresponseObject.getBooking().getFirstname()).isEqualTo("Keerthana");
 
     }
 
