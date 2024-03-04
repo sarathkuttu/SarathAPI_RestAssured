@@ -28,7 +28,7 @@ public class Demo {
 
         Bookingdates bookingdate = new Bookingdates();
         bookingdate.setCheckin("2024-03-19");
-        bookingdate.setCheckin("2024-03-19");
+        bookingdate.setCheckin("2024-03-20");
 
         Booking.setBookingdates(bookingdate);
 
@@ -41,7 +41,7 @@ public class Demo {
         requestSpecification.baseUri("https://restful-booker.herokuapp.com");
         requestSpecification.basePath("booking");
         requestSpecification.contentType(ContentType.JSON);
-        requestSpecification.body(payload).log().all();
+        requestSpecification.body(Booking).log().all();
 
         Response response = requestSpecification.when().post();
 

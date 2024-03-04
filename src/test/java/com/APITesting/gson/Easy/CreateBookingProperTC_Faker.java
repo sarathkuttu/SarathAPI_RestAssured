@@ -1,4 +1,4 @@
-package com.APITesting.gson;
+package com.APITesting.gson.Easy;
 
 import com.APITesting.gson.Easy.Bookingdates;
 import com.APITesting.gson.Easy.CreateBookingSimple;
@@ -13,7 +13,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import static org.assertj.core.api.Assertions.*;
 
-public class CreateBookingProperTC {
+public class CreateBookingProperTC_Faker {
 
     RequestSpecification requestSpecification;
 
@@ -24,11 +24,15 @@ public class CreateBookingProperTC {
 
 //PayloAD
 
-
+        Faker faker = new Faker();
         CreateBookingSimple Booking = new CreateBookingSimple();
-        Booking.setFirstname("Keerthana");
 
-        Booking.setLastname("Aravind");
+        String expectedFirstname = faker.name().firstName();
+        Booking.setFirstname(expectedFirstname);
+
+        String expectedLastname = faker.name().lastName();
+
+        Booking.setLastname(expectedLastname);
 
         Booking.setTotalprice(7000);
 
@@ -70,11 +74,11 @@ public class CreateBookingProperTC {
 
         CreateBookingSimple bookingresponseObject = gson.fromJson(jsonResponseString, CreateBookingSimple.class);
 
-        Assert.assertEquals(bookingresponseObject.getFirstname(),"Keerthana");
+        Assert.assertEquals(bookingresponseObject.getFirstname(),expectedFirstname);
 
-        Assert.assertEquals(bookingresponseObject.getLastname(),"Aravind");
+        Assert.assertEquals(bookingresponseObject.getLastname(),expectedLastname);
 
-       // assertThat(bookingresponseObject.getFirstname()).isEqualTo("Keerthana");
+       // assertThat(bookingresponseObject.getFirstname()).isEqualTo(expectedFirstname).isNotEmpty();
 
     }
 

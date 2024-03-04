@@ -1,8 +1,5 @@
-package com.APITesting.gson;
+package com.APITesting.gson.Easy;
 
-import com.APITesting.gson.Easy.Bookingdates;
-import com.APITesting.gson.Easy.CreateBookingSimple;
-import com.github.javafaker.Faker;
 import com.google.gson.Gson;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -68,13 +65,15 @@ public class CreateBookingProperTC {
         validatableResponse = response.then().log().all();
         validatableResponse.statusCode(200);
 
-        CreateBookingSimple bookingresponseObject = gson.fromJson(jsonResponseString, CreateBookingSimple.class);
+        BookingResponse bookingresponseObject = gson.fromJson(jsonResponseString, BookingResponse.class);
 
-        Assert.assertEquals(bookingresponseObject.getFirstname(),"Keerthana");
+//        Assert.assertEquals(bookingresponseObject.getFirstname(),"Keerthana");
+//
+//        Assert.assertEquals(bookingresponseObject.getLastname(),"Aravind");
 
-        Assert.assertEquals(bookingresponseObject.getLastname(),"Aravind");
-
-       // assertThat(bookingresponseObject.getFirstname()).isEqualTo("Keerthana");
+        assertThat(bookingresponseObject.getBookingid()).isNotNull();
+        assertThat(bookingresponseObject.getBooking().getFirstname()).isNotNull();
+        assertThat(bookingresponseObject.getBooking().getFirstname()).isEqualTo("Keerthana");
 
     }
 
