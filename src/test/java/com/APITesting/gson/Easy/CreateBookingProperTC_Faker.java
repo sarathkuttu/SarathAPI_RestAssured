@@ -34,13 +34,14 @@ public class CreateBookingProperTC_Faker {
 
         Booking.setLastname(expectedLastname);
 
+
         Booking.setTotalprice(7000);
 
         Booking.setDepositpaid(true);
 
         Bookingdates bookingdate = new Bookingdates();
         bookingdate.setCheckin("2024-03-19");
-        bookingdate.setCheckin("2024-03-27");
+        bookingdate.setCheckout("2024-03-27");
 
         Booking.setBookingdates(bookingdate);
 
@@ -72,13 +73,13 @@ public class CreateBookingProperTC_Faker {
         validatableResponse = response.then().log().all();
         validatableResponse.statusCode(200);
 
-        CreateBookingSimple bookingresponseObject = gson.fromJson(jsonResponseString, CreateBookingSimple.class);
+        BookingResponse bookingresponseObject = gson.fromJson(jsonResponseString, BookingResponse.class);
 
-        Assert.assertEquals(bookingresponseObject.getFirstname(),expectedFirstname);
+      assertThat(bookingresponseObject.getBookingid()).isNotNull();
+        assertThat(bookingresponseObject.getBooking().getFirstname()).isNotNull();
+       assertThat(bookingresponseObject.getBooking().getFirstname()).isEqualTo(expectedFirstname);
 
-        Assert.assertEquals(bookingresponseObject.getLastname(),expectedLastname);
-
-       // assertThat(bookingresponseObject.getFirstname()).isEqualTo(expectedFirstname).isNotEmpty();
+        System.out.println(bookingresponseObject.getBookingid());
 
     }
 
